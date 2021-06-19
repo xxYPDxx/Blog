@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="articles/style.css">
+
+
+  <title>Blog</title>
+</head>
+<style>
+  body {
+    margin: 0px;
+    padding: 0px;
+    /* background-color: #161616; */
+
+
+  }
+
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #872406 50%, rgb(233, 150, 24) 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+  }
+
+  .bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+  }
+
+  .bg3 {
+    animation-duration: 5s;
+  }
+
+  .content {
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: .25em;
+    box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    left: 50%;
+    padding: 10vmin;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h1 {
+    font-family: monospace;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(-25%);
+    }
+
+    100% {
+      transform: translateX(25%);
+    }
+  }
+
+
+  #main {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    /* background-color: #872406; */
+
+
+
+
+
+  }
+
+
+  nav {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 50px;
+    background-color: #fdfcf9;
+    box-shadow: 2px 2px 12px rgba(255, 206, 8, 0.05);
+    z-index: 1;
+  }
+
+  .logo {
+    color: black;
+  }
+
+
+
+  .menu {
+    display: flex;
+  }
+
+  .menu li a {
+    padding: 10px 15px;
+    color: #292929;
+    font-size: 12px;
+  }
+
+  .lang {
+    color: black;
+
+  }
+
+
+
+  .menu li a:hover,
+  .menu li a.active {
+    background-color: #292929;
+    color: #ffffff;
+    font-weight: 700;
+    transition: all ease 0.3s;
+  }
+
+  .btn-old {
+    background-color: #d57209;
+    border-radius: 8px;
+    border: 2px solid #d57209;
+    padding: 15px 30px;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+
+
+  }
+
+  #about {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5% 0px 5%;
+    position: relative;
+    background-color: rgb(216, 180, 20);
+
+  }
+
+  .about-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 50%;
+  }
+
+  .about-text h1 {
+    font-size: 5rem;
+    color: #d6870f;
+  }
+
+  .about-text h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #ffffff;
+  }
+
+  .about-text h1,
+  h2 {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .about-text p {
+    font-size: 1.2rem;
+    color: rgba(251, 251, 251, 0.90);
+  }
+
+  .about-text button {
+    width: 200px;
+    height: 50px;
+    background-color: #d6870f;
+    color: #292929;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+  }
+
+  .about-text button:hover {
+    background-color: #ffffff;
+    transition: all ease 0.3s;
+
+  }
+
+  .about-model img {
+    width: 50%;
+    height: 50%;
+    border-radius: 40rem;
+
+    float: right;
+    border: 4px solid #17d1ac;
+
+    /* ********************************************** */
+  }
+
+  #Blog-container {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #FFF;
+  }
+
+
+  .Blog-tea {
+    /* width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5% 0px 5%;
+    position: relative;
+    background-color: teal; */
+    background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5% 0px 5%;
+
+  }
+
+  .cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #D7D4E4;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: cube 12s ease-in forwards infinite;
+  }
+
+  .cube:nth-child(2n) {
+    border-color: #FFF;
+  }
+
+  .cube:nth-child(2) {
+    animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+  }
+
+  .cube:nth-child(3) {
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+  }
+
+  .cube:nth-child(4) {
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+  }
+
+  .cube:nth-child(5) {
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+  }
+
+  .cube:nth-child(6) {
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+  }
+
+  @keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+
+  .Blog-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+
+  .Blog-text h1 {
+    font-size: 8rem;
+    color: #17d1ac;
+  }
+
+  .Blog-text h2 {
+    font-size: 4rem;
+    font-weight: 400;
+    color: #ffffff;
+  }
+
+  .Blog-text h1,
+  h2 {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .btn-new {
+    background-color: #17d1ac;
+    border-radius: 8px;
+    border: 2px solid #17d1ac;
+    padding: 15px 30px;
+    color: white;
+  }
+
+  
+  .btn-read,
+  .btn-delete,
+  .btn-edit {
+    background-color: #fbdd58;
+    border-radius: 10px;
+    border: 2px solid #17d1ac;
+    padding: 3px;
+    margin-top: 10px;
+    justify-content: space-evenly;
+
+  }
+
+  .card-body {
+    background-color: #17d1ac;
+    padding: 15px 90px;
+    border: 3px solid #17d1ac;
+    border-radius: 4px;
+  }
+
+  .name {
+    font-family: sans-serif;
+    width: 500px;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+
+    transform: translate(-20%, -50%);
+  }
+
+  .name p:nth-child(1),
+  .name .details {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+  }
+
+  .name h2 {
+    font-family: sans-serif;
+    font-size: 40px;
+    margin: 0px;
+    letter-spacing: 3px;
+    color: #ffffff;
+
+  }
+
+  .name p {
+    font-size: 20px;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
+
+  }
+
+  footer {
+    /* background-color: #d03303; */
+    color: #fff;
+
+    padding: 8rem 0 6.4rem 0;
+
+
+  }
+
+  footer {
+    display: block;
+    background-color: #872406;
+  }
+
+  .list-links li {
+    margin: 1.4rem 0 0 0;
+    cursor: pointer;
+
+  }
+
+  .list-head {
+    color: #a95515;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  li {
+    display: list-item;
+
+  }
+
+  .footer-list-group {
+    font-family: "Whitney Light";
+    font-size: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .list-links {
+    width: 50%;
+    margin-bottom: 4rem;
+  }
+
+
+
+  .footer-inspire {
+    color: #e96b0a;
+
+
+    font-size: 3rem;
+    opacity: 0.3;
+
+
+  }
+
+  .footer-title {
+    color: #ffe96f;
+    opacity: 0.3;
+
+    font-size: 4.6rem;
+
+  }
+
+
+
+
+
+
+
+  #contact-button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: #f4f7ff;
+    margin: 20px 0px;
+    box-sizing: border-box;
+    box-shadow: 2px 0px 20px rgba(0, 0, 0 0.4);
+  }
+
+  #contact-button button {
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: sans-serif;
+    width: 150px;
+    height: 40px;
+    margin: 10px;
+    background-color: #1e1e1e;
+    border: none;
+    outline: none;
+    box-shadow: 2px 5px 6px rgba(0, 0, 0 0.2);
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+     /* border-radius: 20px;  */
+  }
+
+  #contact-button button:hover {
+    background-color: #17d1ac;
+    color: #000000;
+    transition: all ease 0.5s;
+    font-weight: 700;
+  }
+
+  #contact-form {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(216, 180, 20);
+  }
+
+  #contact-form form {
+    display: flex;
+    width: 70%;
+    height: 60vh;
+    background-color: rgb(216, 180, 20);
+    box-shadow: 2px 12px 20px rgba(0, 0, 0 0.2);
+    border: 1px solid rgba(255.255.255.0.1);
+  }
+
+  .contact-left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .contact-right {
+    width: 60%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 1px solid rgba(0, 0, 0 0.08);
+  }
+
+  .c-l-heading {
+    font-family: sans-serif;
+    color: #ffffff;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+
+  .f-Email,
+  .f-name {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+  }
+
+  .f-Email font,
+  .f-name font {
+    color: #bfbfbf;
+    font-size: 22px;
+  }
+
+  .f-Email input,
+  .f-name input {
+    height: 30px;
+    width: 250px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid #929292;
+    color: #ffffff;
+    margin: 10px 0px;
+  }
+
+  .f-Email input::placeholder,
+  .f-name input::placeholder {
+    opacity: 0.5;
+    letter-spacing: 1px;
+  }
+
+  .f-Email input:focus,
+  .f-name input:focus {
+    border-bottom: 1px solid rgb(22, 171, 171);
+    transition: all ease 0.5s;
+  }
+
+  .message font {
+    font-size: 18px;
+    color: #4e4e4e;
+    font-family: sans-serif;
+  }
+
+  .message {
+    margin: 20px;
+    /* display: flex;
+    flex-direction: column; */
+  }
+
+  .contact-right textarea {
+    width: 100% !important;
+    height: 320px !important;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    color: #ebebeb;
+    font-size: 16px;
+  }
+
+  .contact-right textarea::placeholder {
+    color: #ebebeb;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+  }
+
+  .contact-right button {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(22, 171, 171);
+
+    font-weight: bold;
+    outline: none;
+    border: none;
+    margin: 0px;
+    color: #1b1b1b;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+
+  }
+
+  .contact-right button:active {
+    transform: scale(1.04);
+    transition: all ease 0.1s;
+    background-color: white;
+  }
+
+  .card-title {
+    margin-top: 4px;
+
+  }
+
+  .card-date {
+    margin-top: 4px;
+  }
+
+  .card-text {
+    margin-top: 4px;
+  }
+
+  .rese {
+    justify-content: center;
+    text-align: center;
+  }
+
+
+
+
+
+
+
+  /* *************************************************************************************** */
+  @media(min-width: 768px) {
+
+
+
+    .info-box {
+      margin-bottom: 5.6rem;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    .footer-list-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      color: #fff;
+      font-family: "Whitney Light";
+      font-size: 1.6rem;
+    }
+
+    @media(min-width: 1024px) {
+      .footer-list-group {
+        width: 70%;
+      }
+
+      .list-links {
+        width: 25%;
+        margin-bottom: 4rem;
+      }
+
+    }
+
+
+  }
+</style>
+
+<body>
+  <section id="main">
+
+
+    <!-- navigation--------- -->
+    <nav>
+      <!--logo------- ------ -->
+
+      <a href="#" class="logo">CHILLmax</a>
+
+
+      <!-- menu---------- -->
+      <ul class="menu">
+        <li class="active"><a href="#main">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#Blog-container">Blog</a></li>
+
+        <li><a href="#contact-form">Contact</a></li>
+      </ul>
+
+
+      <a href="/signin" class="lang">LOGOUT</a>
+
+
+
+    </nav>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <div class="name">
+      <h2>Publish your passions, your way</h2>
+      <p>Create a unique and beautiful blog. It’s easy and free.</p>
+      <a href="/newarti" class="btn-old">New Article</a>
+    </div>
+
+  </section>
+  <section id="about">
+    <!-- text------------- -->
+    <div class="about-text">
+      <h1>About us</h1>
+      <h2>Web developer & Blogger</h2>
+      <p>Create a beautiful blog that fits your style. Choose from a selection of easy-to-use templates – all with
+        flexible layouts and hundreds of background images – or design something new.</p>
+      <button>MORE DETAILS</button>
+    </div>
+  </section>
+
+  <section id="Blog-container">
+    <div class="Blog-tea">
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="Blog-text">
+        <h1>Blog </h1>
+        <h2>Articles</h2>
+      </div>
+      <a href="/newarti" class="btn-new">New Article</a>
+
+      <% arti.forEach(article=> { %>
+        <div class="card-main">
+          <div class="card-body">
+            <h4 class="card-title">
+              <%= article.title %>
+            </h4>
+            <a href="/edit/<%= article._id %>" class="btn-edit">Edit</a>
+            <form action="/deletearticle/<%= article._id %>" method="POST" class="d-inline">
+              <button type="submit" class="btn-delete">Delete</button>
+            </form>
+          </div>
+        </div>
+        <% }) %> -->
+         
+  </section>
+  <section id="contact-form">
+    <form>
+      <!-- left------- -->
+          <div class="contact-left">
+            <!-- heading -->
+            <h1 class="c-l-heading">
+              <font style="border-bottom:3px solid #1ed98b;">Write to us</font>
+            </h1>
+            <div class="f-name">
+              <!-- name----- -->
+              <font>Name</font>
+              <input type="text" placeholder="Full Name">
+            </div>
+            <div class="f-Email">
+              <!-- name----- -->
+              <font>Email</font>
+              <input type="Email" placeholder="Example@gmail.com">
+            </div>
+          </div>
+          <!-- div-right---- -->
+          <div class="contact-right">
+            <!-- message -->
+            <div class="message">
+              <font>Message</font>
+              <textarea name="message" placeholder="Write message..." cols="20" rows="5"></textarea>
+
+            </div>
+            <!-- submit -->
+            <button>submit</button>
+          </div>
+          </form>
+  </section>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="info-box">
+          <h4 class=" footer-title">Be Creative</h4>
+
+
+          <h3 class="footer-inspire">Be Inspiring</h3>
+
+
+        </div>
+
+        <div class="footer-list-group">
+
+
+          <ul class="list-links">
+            <li class="list-head">Help</li>
+            <li>Help Center</li>
+            <li>Why Blogging</li>
+            <li>Inspiration</li>
+            <li>Blog Tutorials</li>
+
+          </ul>
+
+          <ul class="list-links">
+            <li class="list-head">Community</li>
+
+            <li>Blogger Buzz</li>
+            <li>Jobs</li>
+            <li>Writing</li>
+
+
+          </ul>
+
+          <ul class="list-links">
+            <li class="list-head">Developer</li>
+            <li>Support</li>
+            <li>Blogger API</li>
+            <li>Forum</li>
+            <li>Feedback</li>
+
+          </ul>
+
+
+
+        </div>
+
+      </div>
+      <div class="rese">
+        Copyright 2019 CHILLmaxBlogs| All Rights Reserved
+      </div>
+
+  </footer>
+</body>
+
+</html>
+
+</body>
+
+</html>

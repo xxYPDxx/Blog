@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    font-family: sans-serif;
+    background: rgb(82, 84, 231);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/public/images/images.jpg);
+}
+
+.bg-image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.inner_container{
+    position: relative;
+    width: 350px;
+    height: 450px;
+    box-shadow: 0 0 40px 20px rgba(0,0,0,0.5);
+}
+.box-container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+.login, .register{
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-image: ();
+    background-size: cover;
+    background-position: center;
+    padding: 55px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+}
+
+.box{
+    width: 100%;
+    background: transparent;
+    border: 0.5px solid white;
+    margin: 10px 0px;
+    height: 30px;
+    border-radius: 20px;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    color: white;
+}
+
+.inner_container h2{
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+::placeholder{
+    font-size: 14px;
+    color: white;
+}
+
+.btn{
+    height: 40px;
+    width: 100%;
+    background: transparent;
+    border: 0px;
+    font-size: 16px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    font-weight: 550;
+}
+
+.btn:hover{
+    background: transparent;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.sub{
+    height: 40px;
+    width: 50%;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin: 20px 60px 25px;
+    font-size: 16px;
+    padding: 0px 10px;
+    cursor: pointer;
+    color: white;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.sub:hover{
+    background: black;
+    border-color: black;
+    color: white;
+    transition: 0.1s ease;
+}
