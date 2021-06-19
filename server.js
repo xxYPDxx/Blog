@@ -92,6 +92,9 @@ app.get("/index", async (req,res) => {
     })
 })
 
+app.get("/newarti", (req , res) => {  
+    res.render("new.ejs")  
+})
 
 //Add
 app.post("/newarticle", async (req, res) => {
